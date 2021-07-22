@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-size: 62.5%;
+}
+
+:root {
+  --font-head: 'Inconsolata', monospace;
+  --font-body: 'Space Mono', monospace;
+  --font-footer: 'Montserrat', sans-serif;
+  --color-text: #4f4f4f;
+  --color-head: #333333;
+  --color-footer: #bdbdbd;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: auto;
+}
+header h1 {
+  font: bold 2.4rem var(--font-head);
+  padding: 3%;
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+main .image {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+main .image img {
+  max-width: 70%;
+}
+
+main .text {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  padding: 3rem;
+}
+
+main .text h1 {
+  font: bold 4.8rem var(--font-body);
+  margin-bottom: 3rem;
+  color: var(--color-head);
+}
+
+main .text p {
+  font: normal 1.8rem var(--font-body);
+  color: var(--color-text);
+  margin-bottom: 6.6rem;
+}
+
+main .text a {
+  display: inline-block;
+  font: bold 1.4rem var(--font-body);
+  background-color: var(--color-head);
+  color: white;
+  padding: 2.4rem 4.3rem;
+  text-align: center;
+  max-width: 30rem;
+  border: 2px solid var(--color-head);
+
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.39);
+}
+
+main .text a:hover {
+  border: 2px dotted var(--color-head);
+  background-color: #ffffff;
+  color: #333333;
+}
+
+footer {
+  /* border: 2px solid red; */
+  padding: 2rem;
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p,
+footer a {
+  font: 500 1.4rem var(--font-footer);
+  color: var(--color-footer);
+
+  transition: 0.3s ease;
+}
+
+footer a:first-child:hover {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+/* 
+MAX-WIDTH -> DO 0 AO MAX WIDTH TERÁ ESTA CONFIGURAÇÃO
+MIN-WIDTH -> A PARTIR DO MIN-WIDTH TERÁ ESTA CONFIGURAÇÃO
+*/
+
+@media screen and (min-width: 700px) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main .image img {
+    max-width: 34rem;
+    max-height: 36rem;
+  }
+
+  main .text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main .image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  main .text {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
